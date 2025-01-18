@@ -31,3 +31,25 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Maven
+target/                      # Exclude compiled output of Maven (e.g., .class files)
+!.mvn/wrapper/maven-wrapper.jar  # Allow the Maven wrapper jar file to be committed
+.mvn/wrapper/maven-wrapper.properties  # Keep Maven wrapper properties
+**/pom.xml                   # Ensure the pom.xml files are included
+
+# Logs
+*.log                        # Exclude all log files
+
+# IntelliJ
+.idea/                       # Exclude IntelliJ-specific project settings
+*.iml                        # Exclude IntelliJ module files
+
+# Eclipse
+.classpath                   # Exclude Eclipse classpath settings
+.project                     # Exclude Eclipse project settings
+.settings/                   # Exclude Eclipse configuration directory
+
+# OS-specific
+.DS_Store                    # macOS Finder-specific metadata file
+Thumbs.db                    # Windows-specific thumbnail cache
