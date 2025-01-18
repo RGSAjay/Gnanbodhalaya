@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Course</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Edit Course</h1>
+    
+    <form action="/admin/courses/edit" method="post">
+        <input type="hidden" th:value="${course.id}" name="id">
+        
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" th:value="${course.title}" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" th:text="${course.description}" required></textarea>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" th:value="${course.category}" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" th:value="${course.price}" step="0.01" required>
+
+        <label for="trainerEmail">Trainer Email:</label>
+        <input type="email" id="trainerEmail" name="trainerEmail" th:value="${course.trainerEmail}" required>
+
+        <button type="submit">Update Course</button>
+    </form>
+
+    <a href="/admin/courses">Back to Courses List</a>
+</body>
+</html>
